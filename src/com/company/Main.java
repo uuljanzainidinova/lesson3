@@ -1,20 +1,29 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     
 
     public static void main(String[] args) {
-        double[] numbers={1.1, 2.2, -3.3, -4.4, 5.5, 6.6, -7.7, 8.8, 9.9, -10.1, 11.2, 12.3, -16.98, 14.1, 15.456
+        double[] numbers={-1.1, 2.2, -3.3, -4.4, 5.5, 6.6, -7.7, 8.8, 9.9, -10.1, 11.2, 12.3, -16.98, 14.1, 15.456
         };
+        double sum =0;
+      //  boolean isFacedNegative= true;
+      //  double avarageSum;
+        int counter=0;
+
         for (double myNumbers:numbers) {
-
-
-            System.out.println((numbers[4]+numbers[5]+numbers[7]+numbers[8]+numbers[10]+numbers[11]+numbers[13]+numbers[14])/8);
-           break;
-
-
-
+//            if (myNumbers<0){
+//                isFacedNegative=false;
+//
+//            }
+             if (myNumbers>0){
+                sum+=myNumbers;
+                counter++;
+            }
         }
+        System.out.println(Arrays.deepToString(new double[][]{numbers})+"="+sum / counter);
     }
 }
